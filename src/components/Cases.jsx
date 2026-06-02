@@ -140,9 +140,9 @@ export default function Cases() {
             <p>
               患者并非从一开始就按免疫病治疗，而是在帕金森病治疗效果不佳、自身免疫抗体持续升高、临床表现有不典型特征的背景下，后期才转向免疫方向的探查与试验性治疗（糖皮质激素）。
             </p>
-            <p style={{ marginTop: 8, color: 'var(--text-3)', fontSize: 12 }}>
+            {/* <p style={{ marginTop: 8, color: 'var(--text-3)', fontSize: 12 }}>
               注：本案例尚未提及确诊为自身免疫性 / 副肿瘤性帕金森综合征之后的预后信息。
-            </p>
+            </p> */}
           </Section>
           <EvidenceChain
             steps={[
