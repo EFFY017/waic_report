@@ -136,6 +136,14 @@ export default function Cases() {
               <strong>这些分散在不同检查中的线索共同指向自身免疫病因。</strong>
             </p>
           </Section>
+          <Section label="诊疗路径说明">
+            <p>
+              患者并非从一开始就按免疫病治疗，而是在帕金森病治疗效果不佳、自身免疫抗体持续升高、临床表现有不典型特征的背景下，后期才转向免疫方向的探查与试验性治疗（糖皮质激素）。
+            </p>
+            <p style={{ marginTop: 8, color: 'var(--text-3)', fontSize: 12 }}>
+              注：本案例尚未提及确诊为自身免疫性 / 副肿瘤性帕金森综合征之后的预后信息。
+            </p>
+          </Section>
           <EvidenceChain
             steps={[
               { label: '特征提取', text: '波动性帕金森综合征 + 激素反应性 + CSF 炎症标志物' },
