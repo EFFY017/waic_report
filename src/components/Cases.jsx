@@ -21,6 +21,7 @@ export default function Cases() {
           title="时序推理与多模态证据整合 — 视神经脊髓炎谱系疾病（NMOSD）"
           subtitle="症状 59 天内进行性上升 · 影像 + 脑脊液 + 抗体多模态整合 · 95% 置信度"
           shot={shotNmosd}
+          confirmer="新华医院长兴分院神经内科岳副主任"
         >
           <Section label="患者时间线">
             <p>
@@ -56,6 +57,7 @@ export default function Cases() {
           title="跨越 50 年的诊断旅程 — NLRP3 相关自身炎症性疾病"
           subtitle="57 岁患者 · 7 岁起反复发作 · 辗转多家医院均按常见病处理"
           shot={shotNlrp3}
+          confirmer="清华大学医学院洪医生"
         >
           <Section label="50 年患者旅程">
             <p>
@@ -121,6 +123,7 @@ export default function Cases() {
           title="打破“帕金森”思维定式 — 自身免疫性帕金森综合征"
           subtitle="标准帕金森治疗失败 · DeepRare 发现隐藏的自身免疫线索 · 95% 置信度"
           shot={shotParkinson}
+          confirmer="平湖市第一人民医院柯副主任"
         >
           <Section label="人类诊断路径（陷入僵局）">
             <p>
@@ -160,6 +163,7 @@ export default function Cases() {
           title="8 个诊断背后的 1 个基因 — Pierpont 综合征（TBL1XR1）"
           subtitle="外院多科室各给诊断标签 · 无人追问统一病因 · DeepRare 一个基因解释一切"
           shot={shotPierpont}
+          confirmer="中山大学附属第一医院儿科徐主任"
         >
           <Section label="外院诊断（多科室、多标签）">
             <p>

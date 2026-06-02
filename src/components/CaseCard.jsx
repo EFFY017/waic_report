@@ -1,7 +1,7 @@
 // 案例详情直接平铺展示（无需点击展开）。
 // 每个案例预留 `shot` 截图位：产品实际诊断界面截图就绪后，
 // 传入 import 的图片即可自动填充，无需改动布局。
-export default function CaseCard({ num, title, subtitle, shot, children }) {
+export default function CaseCard({ num, title, subtitle, shot, confirmer, children }) {
   return (
     <div className="case-card static">
       <div className="case-card-header">
@@ -10,7 +10,7 @@ export default function CaseCard({ num, title, subtitle, shot, children }) {
           <div className="case-title">{title}</div>
           <div className="case-subtitle">{subtitle}</div>
         </div>
-        <span className="case-badge confirmed">✓ 临床确认</span>
+        <span className="case-badge confirmed">✓ {confirmer || '临床确认'}</span>
       </div>
       <div className="case-expand">
         <div className="case-body">

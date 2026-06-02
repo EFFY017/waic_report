@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import logo from 'src/assets/DeepRare-logo.svg'
 
 const links = [
-  { id: 'why', num: '01', label: '为什么' },
+  { id: 'why', num: '01', label: '概览' },
   { id: 'cases', num: '02', label: '真实案例' },
   { id: 'systems', num: '03', label: '系统展示' },
   { id: 'booth', num: '04', label: '展厅设计' },

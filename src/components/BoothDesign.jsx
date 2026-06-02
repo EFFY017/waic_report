@@ -26,7 +26,7 @@ export default function BoothDesign() {
       id="booth"
       num="04"
       title="展厅设计与布展细则"
-      lead='WAIC 里所有人都在证明 AI 有多强，而我们想讲 AI 真实帮助了多少人'
+      lead='从患者故事出发，AI 真实帮助到哪些人'
     >
       <div className="cards">
         {cards.map((c) => (
@@ -152,11 +152,6 @@ export default function BoothDesign() {
           </tr>
         </tbody>
       </table>
-
-      <div className="highlight green">
-        <strong>差异化定位：</strong>不证明 AI 有多强，而是展现 AI
-        真实帮助了多少人。一张有温度的名片比一张有算力的名片传得更远。
-      </div>
     </Page>
   )
 }
