@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+
+# original single-file source, kept for reference
+DeepRare_WAIC2026_经信委汇报版 (1).html
