@@ -17,6 +17,7 @@ function Screenshot({ src, alt, caption }) {
 export default function Systems() {
   return (
     <Page
+      id="systems"
       num="03"
       title="两套系统 · 均可现场交互演示"
       lead="展位核心体验：来访者可亲手操作系统，而非观看视频。两套系统覆盖线上开放平台与院内质控两条落地路径。"

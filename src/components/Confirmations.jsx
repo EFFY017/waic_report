@@ -12,7 +12,8 @@ const items = [
 export default function Confirmations() {
   return (
     <Page
-      num="07"
+      id="confirm"
+      num="08"
       title="需要确认的事项"
       lead="恳请经信委协助确认以下信息，以便我们精确推进筹备工作。"
     >

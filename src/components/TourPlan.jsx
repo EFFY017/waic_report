@@ -31,7 +31,8 @@ const steps = [
 export default function TourPlan() {
   return (
     <Page
-      num="05"
+      id="tour"
+      num="06"
       title="领导巡展讲解方案（3 分钟）"
       lead="考虑到高层巡展停留时间短，设计 3 分钟快速版讲解动线。如有兴趣可随时展开至 10-15 分钟完整版。"
     >

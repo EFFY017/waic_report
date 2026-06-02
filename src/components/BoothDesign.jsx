@@ -23,9 +23,10 @@ const mutedSub = { fontWeight: 400, color: 'var(--text-3)', fontSize: 11 }
 export default function BoothDesign() {
   return (
     <Page
+      id="booth"
       num="04"
       title="展厅设计与布展细则"
-      lead='我们不打算做又一个“深色背景+科技蓝光”的技术展位。DeepRare 的产品用在诊室里，展位风格也应该是温暖的、有人文关怀的——让它成为整个 WAIC 里最让人“想走进去”的空间。'
+      lead='WAIC 里所有人都在证明 AI 有多强，而我们想讲 AI 真实帮助了多少人'
     >
       <div className="cards">
         {cards.map((c) => (

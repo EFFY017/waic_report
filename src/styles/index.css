@@ -38,6 +38,60 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ===== NAV ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .3s, box-shadow .3s, border-color .3s;
+}
+.nav.solid {
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 14px rgba(0,0,0,0.04);
+}
+.nav-inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: 13px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.nav-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: #fff; text-decoration: none; white-space: nowrap;
+  transition: color .3s;
+}
+.nav-logo {
+  height: 24px; width: auto; display: block;
+  /* logo 为深蓝色，在深色封面上反白显示；滚动后恢复原色 */
+  filter: brightness(0) invert(1);
+  transition: filter .3s;
+}
+.nav.solid .nav-logo { filter: none; }
+.nav-brand span {
+  font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 400;
+  opacity: .55;
+}
+.nav.solid .nav-brand { color: var(--text); }
+.nav-links { display: flex; gap: 2px; }
+.nav-link {
+  display: inline-flex; align-items: baseline; gap: 5px;
+  padding: 6px 11px; border-radius: 8px;
+  font-size: 13px; text-decoration: none; white-space: nowrap;
+  color: rgba(255,255,255,0.72);
+  transition: color .2s, background .2s;
+}
+.nav-link:hover { color: #fff; background: rgba(255,255,255,0.12); }
+.nav-link.active { color: #fff; background: rgba(255,255,255,0.18); }
+.nav-num { font-family: 'DM Mono', monospace; font-size: 10px; opacity: .6; }
+.nav.solid .nav-link { color: var(--text-3); }
+.nav.solid .nav-link:hover { color: var(--blue); background: var(--blue-light); }
+.nav.solid .nav-link.active { color: var(--blue); background: var(--blue-light); }
+
+/* offset anchor jumps for the fixed nav */
+.page { scroll-margin-top: 64px; }
+
 /* ===== COVER ===== */
 .cover {
   min-height: 100vh;
@@ -410,6 +464,7 @@ body {
 
 /* ===== PRINT ===== */
 @media print {
+  .nav { display: none; }
   .cover { min-height: auto; padding: 48px; break-after: page; }
   .page { break-inside: avoid; padding: 40px; }
   .cover-stats { position: static; transform: none; flex-direction: row; gap: 40px; margin-top: 32px; }
@@ -429,4 +484,13 @@ body {
   .booth-zone.full { grid-column: auto; }
   .case-body { grid-template-columns: 1fr; }
   .case-shot { position: static; }
+
+  .nav-inner { padding: 10px 16px; gap: 12px; }
+  .nav-brand span { display: none; }
+  .nav-links {
+    flex: 1; min-width: 0;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
 }

@@ -30,7 +30,8 @@ const milestones = [
 export default function Timeline() {
   return (
     <Page
-      num="06"
+      id="timeline"
+      num="07"
       title="筹备时间线"
       lead="以下为关键里程碑，具体排期需根据 WAIC 确切日期和布展截止时间倒排。"
     >

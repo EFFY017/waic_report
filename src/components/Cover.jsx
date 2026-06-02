@@ -7,7 +7,7 @@ const stats = [
 
 export default function Cover() {
   return (
-    <section className="cover">
+    <section className="cover" id="top">
       <div className="cover-tag">WAIC 2026 · 国家展方案汇报</div>
       <h1>
         DeepRare<br />
@@ -15,7 +15,7 @@ export default function Cover() {
         AI 罕见病诊断系统
       </h1>
       <p className="cover-sub">
-        由上海交通大学 AI 学院与上海交通大学医学院附属新华医院联合研发。已覆盖全球 65
+        上海交通大学，上海交大医学院附属新华医院，以及观壹智能联合研发。覆盖全球 65
         个国家和地区，代表中国 AI+医疗领域的国际影响力名片。
       </p>
       <div className="cover-meta">

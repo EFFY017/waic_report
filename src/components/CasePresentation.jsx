@@ -66,7 +66,8 @@ const rows = [
 export default function CasePresentation() {
   return (
     <Page
-      num="04.5"
+      id="formats"
+      num="05"
       title="五个案例的展示形式"
       lead="每个案例有两层展示：故事墙浏览概述（5 秒）→ 故事墙案例旁边屏幕点开案例专区查看详情 + 医生视频（1-2 分钟）。故事墙旁提供一块屏幕，用于展示案例讲解视频。"
     >

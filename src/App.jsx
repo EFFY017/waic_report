@@ -1,3 +1,4 @@
+import Nav from './components/Nav.jsx'
 import Cover from './components/Cover.jsx'
 import WhyDeepRare from './components/WhyDeepRare.jsx'
 import Cases from './components/Cases.jsx'
@@ -12,6 +13,7 @@ import Footer from './components/Footer.jsx'
 export default function App() {
   return (
     <>
+      <Nav />
       <Cover />
       <WhyDeepRare />
       <Cases />

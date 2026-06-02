@@ -21,6 +21,7 @@ const cards = [
 export default function WhyDeepRare() {
   return (
     <Page
+      id="why"
       num="01"
       title="为什么 DeepRare 适合代表国家展"
       lead="国家展需要回答一个问题：中国 AI 如何解决全球性难题？DeepRare 是目前极少数能用真实案例回答这个问题的系统。"

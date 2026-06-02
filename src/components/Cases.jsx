@@ -4,6 +4,7 @@ import CaseCard, { Section, EvidenceChain, Tags } from './CaseCard.jsx'
 export default function Cases() {
   return (
     <Page
+      id="cases"
       num="02"
       title="真实改变命运的案例"
       lead="以下均为 DeepRare 系统的真实诊断结果，经临床医生确认一致。每个案例展示了 AI 在不同场景下的独特诊断能力。"
