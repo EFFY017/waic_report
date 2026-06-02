@@ -1,5 +1,11 @@
 import Page from './Page.jsx'
 import CaseCard, { Section, EvidenceChain, Tags } from './CaseCard.jsx'
+// 截图按「诊断结果内容」对应到卡片，而非文件名顺序：
+import shotNmosd from 'src/assets/case5.png' // 视神经脊髓炎谱系疾病 (NMOSD) → 案例 01
+import shotNlrp3 from 'src/assets/case1.png' // NLRP3 相关自身炎症性疾病 → 案例 02
+import shotParkinson from 'src/assets/case2.png' // 自身免疫性帕金森综合征 → 案例 04
+import shotPierpont from 'src/assets/case3.png' // Pierpont 综合征 (TBL1XR1) → 案例 05
+import shotCannabinoid from 'src/assets/case4.png' // 合成大麻素中毒性白质脑病 → 案例 03
 
 export default function Cases() {
   return (
@@ -12,38 +18,44 @@ export default function Cases() {
       <div className="case-cards">
         <CaseCard
           num="01"
-          title="发育迟缓伴肺发育不良 — 确诊 Prader-Willi 综合征"
-          subtitle="20 个月男婴 · 发育迟缓伴多发畸形 · 非典型表现干扰常规诊断"
+          title="时序推理与多模态证据整合 — 视神经脊髓炎谱系疾病（NMOSD）"
+          subtitle="症状 59 天内进行性上升 · 影像 + 脑脊液 + 抗体多模态整合 · 95% 置信度"
+          shot={shotNmosd}
         >
-          <Section label="患者情况">
+          <Section label="患者时间线">
             <p>
-              20 个月男婴，体重 11.4kg，身高 78.7cm。头围 45cm，面容特殊，阴囊发育不全，睾丸未触及，阴茎短小。染色体
-              46XY，B 超显示双侧睾丸下降不全，脑外间隙增宽，胸部 CT 提示肺发育不全。
+              第 1 天双侧胸肋部疼痛 → 第 54 天肩颈背部疼痛扩散 → 第 58 天双下肢发麻、左重右轻 →
+              第 59 天左脚不能活动、小便潴留。<strong>症状随时间呈进行性“上升性”进展。</strong>
             </p>
           </Section>
-          <Section label="诊断挑战">
+          <Section label="多模态证据">
             <p>
-              DeepRare 给出 Top 4 候选疾病。其中 <strong>Prader-Willi 综合征（PWS）排名第 2</strong>
-              ，因为该患儿缺乏 PWS
-              的典型特征（暴食、肥胖），且肺发育不全作为非典型表现形成干扰。排名第 1 的
-              Smith-Lemli-Opitz 综合征在后续基因检测中被排除，最终经特异性甲基化检测确认 PWS 诊断。
+              MRI：脊髓长节段异常信号 · 头颅 MRI：侧脑室旁垂直分布的斑点影 · 脑脊液：蛋白 0.76g/L
+              ↑、淋巴 85% · 抗体：<strong>AQP4-IgG (+) 1:100</strong>。
             </p>
           </Section>
           <Section label="核心洞察">
             <p>
-              <strong>
-                即使在非典型表现干扰下，DeepRare
-                仍将正确诊断纳入高优先级候选，并明确标注了需要排除的鉴别诊断和推荐的特异性检测方法。
-              </strong>
+              <strong>不是关键词匹配，而是真正的医学推理。</strong>DeepRare 捕捉到症状随时间的“上升性”进展模式，结合影像与脑脊液证据，在
+              MS / NMOSD / 脊髓炎等复杂鉴别中精准定位——证明 AI 具备对疾病时间线逻辑的深层理解。
             </p>
           </Section>
-          <Tags items={['🧬 特异性甲基化检测确诊', '⚠️ 非典型表现', '👶 儿科遗传']} />
+          <EvidenceChain
+            steps={[
+              { label: '临床特征提取', text: '脊髓长节段病变 + AQP4-IgG(+) + 脑脊液炎症 + 双抗体阳性' },
+              { label: 'NMOSD 诊断标准', text: '≥1 个核心临床特征 + AQP4-IgG 血清阳性 → AQP4-IgG 阳性 NMOSD' },
+              { label: '文献验证', text: 'Orphanet NMOSD:71211 · OMIM 614250 · Case Rep 2026 双抗体阳性首例' },
+              { label: '诊断结论', text: 'NMOSD · 95% 置信度 · 鉴别 MOGAD 6/14 | 结节病 7/14' },
+            ]}
+          />
+          <Tags items={['⏱ 时序推理', '🧩 多模态证据整合', '🧠 复杂鉴别诊断']} />
         </CaseCard>
 
         <CaseCard
           num="02"
           title="跨越 50 年的诊断旅程 — NLRP3 相关自身炎症性疾病"
           subtitle="57 岁患者 · 7 岁起反复发作 · 辗转多家医院均按常见病处理"
+          shot={shotNlrp3}
         >
           <Section label="50 年患者旅程">
             <p>
@@ -73,6 +85,7 @@ export default function Cases() {
           num="03"
           title="穿透噪音的语义理解 — 合成大麻素中毒性白质脑病"
           subtitle="患者使用口语化描述 · 零医学术语 · AI 穿透语义噪音精准定位"
+          shot={shotCannabinoid}
         >
           <Section label="患者原始主诉（原文）">
             <p
@@ -107,6 +120,7 @@ export default function Cases() {
           num="04"
           title="打破“帕金森”思维定式 — 自身免疫性帕金森综合征"
           subtitle="标准帕金森治疗失败 · DeepRare 发现隐藏的自身免疫线索 · 95% 置信度"
+          shot={shotParkinson}
         >
           <Section label="人类诊断路径（陷入僵局）">
             <p>
@@ -137,6 +151,7 @@ export default function Cases() {
           num="05"
           title="8 个诊断背后的 1 个基因 — Pierpont 综合征（TBL1XR1）"
           subtitle="外院多科室各给诊断标签 · 无人追问统一病因 · DeepRare 一个基因解释一切"
+          shot={shotPierpont}
         >
           <Section label="外院诊断（多科室、多标签）">
             <p>

@@ -23,19 +23,21 @@ export default function CaseCard({ num, title, subtitle, shot, children }) {
 }
 
 function CaseShot({ src, title }) {
+  if (src) {
+    return (
+      <a className="case-shot has-image" href={src} target="_blank" rel="noopener noreferrer">
+        <img src={src} alt={`${title} · DeepRare 诊断结果`} />
+        <span className="case-shot-cap">DeepRare 系统诊断结果 · 点击查看大图</span>
+      </a>
+    )
+  }
   return (
     <div className="case-shot">
-      {src ? (
-        <img src={src} alt={`${title} · DeepRare 诊断界面`} />
-      ) : (
-        <>
-          <div className="case-shot-icon">🖼️</div>
-          <div className="case-shot-hint">
-            <strong>DeepRare 诊断界面截图</strong>
-            预留位 · 待替换为产品实际截图
-          </div>
-        </>
-      )}
+      <div className="case-shot-icon">🖼️</div>
+      <div className="case-shot-hint">
+        <strong>DeepRare 诊断界面截图</strong>
+        预留位 · 待替换为产品实际截图
+      </div>
     </div>
   )
 }
